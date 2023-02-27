@@ -8,17 +8,17 @@ void main(){
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context){
-
     return MaterialApp(
       // home:HomePage(),
-      theme: ThemeData(
-        primarySwatch: Colors.yellow,
-        fontFamily: GoogleFonts.lato().fontFamily,
-        ),
-      themeMode: ThemeMode.dark,
-      darkTheme:ThemeData(
-        brightness:Brightness.dark,
-      ),
+  //     theme: ThemeData(
+  //       primarySwatch: Colors.yellow,
+  //       fontFamily: GoogleFonts.ooohBaby().fontFamily,
+  // ),
+        
+      // themeMode: ThemeMode.dark,
+      // darkTheme:ThemeData(
+      //   brightness:Brightness.dark,
+      // ),
       // initialRoute:"/home",
       routes: {
         "/": (context)=> LoginPage(),
