@@ -1,18 +1,22 @@
 // import 'dart:html';
 
+import 'package:first_app/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 class LoginPage extends StatelessWidget{
   @override 
   Widget build(BuildContext context){
     return Material(
+       color:Colors.white,
+       child:SingleChildScrollView(
       child: Column(children: [
-        Image.asset("assets/images/nik.png",
+         Image.asset("assets/images/nik.png",
         fit:BoxFit.cover,
+        // height:500,
         ),
-        Text("Come in",
+        Text("Hey USER",
         style:TextStyle(color:Colors.black,
-        fontSize:24,
+        fontSize:20,
         // fontFamily: "assets\fonts\OoohBaby-Regular.ttf",
         fontWeight: FontWeight.bold,
         ),
@@ -40,14 +44,15 @@ class LoginPage extends StatelessWidget{
         SizedBox(height:20.0,),
         ElevatedButton(
           child:Text("Login"),
-          style:TextButton.styleFrom(),
+          style:TextButton.styleFrom(minimumSize :Size(160,50)),
           onPressed:(){
-            print("Hi User");
-          }),
+            Navigator.pushNamed(context,MyRoutes.homeRoute);
+          },)
       ],
       ),
         ),
       ],
-    ));
+    )),
+    );
   }
 }
